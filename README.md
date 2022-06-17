@@ -31,7 +31,7 @@ Em seguinda execute o comando para inicializar o servidor web ``cmd cd ../web np
 
 Importe o arquivo dump-ipdv-202206171346 na raiz do projeto para seu banco postgres e configure suas credências de acesso ao banco em ``./api/src/data-source.ts``
 
-```
+```typescript
 export const AppDataSource = new DataSource({
     type: "postgres",
     host: "localhost", //Mude aqui
