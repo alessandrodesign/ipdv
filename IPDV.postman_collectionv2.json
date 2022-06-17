@@ -1,0 +1,342 @@
+{
+	"variables": [],
+	"info": {
+		"name": "IPDV",
+		"_postman_id": "c730f2f5-4fa7-42fa-9554-a6f77c506c1c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adicionar usuario",
+			"request": {
+				"url": "{{base_url}}/usuario",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"Alessandro Souza\",\n\t\"email\":\"alessandrodesign360@gmail.com\",\n\t\"senha\":\"123456789\",\n\t\"cargo\":null, \n\t\"departamento\":null\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "selecionar usuario",
+			"request": {
+				"url": "{{base_url}}/usuario/23",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"Alessandro Souza\",\n\t\"email\":\"alessandrodesign360@gmail.com\",\n\t\"senha\":\"123456789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "selecionar departamentos",
+			"request": {
+				"url": "{{base_url}}/departamento/2/usuarios",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"Alessandro Souza\",\n\t\"email\":\"alessandrodesign360@gmail.com\",\n\t\"senha\":\"123456789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login usuario",
+			"request": {
+				"url": "{{base_url}}/usuario/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"alessandrodesign360@gmail.com\",\n\t\"senha\":\"123456789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar usuario",
+			"request": {
+				"url": "{{base_url}}/usuario",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 7,\n\t\"nome\": \"Alessandro Souza\",\n\t\"email\": \"alessandrodesign360@gmail.com\",\n\t\"senha\": null\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar departamento",
+			"request": {
+				"url": "{{base_url}}/departamento",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 3,\n\t\"nome\": \"Infraestrutura\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar centro de custo",
+			"request": {
+				"url": "{{base_url}}/centro-de-custo",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 18,\n\t\"nome\": \"Vendas\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar cargo",
+			"request": {
+				"url": "{{base_url}}/cargo",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 3,\n\t\"nome\": \"Infraestrutura\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar departamento a centro",
+			"request": {
+				"url": "{{base_url}}/centro-de-custo/add-departamento",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"departamentoId\": 3, \n\t\"centroDeCustoId\": 19\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deletar usuario",
+			"request": {
+				"url": "{{base_url}}/usuario/6",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deletar cargo",
+			"request": {
+				"url": "{{base_url}}/cargo/6",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deletar centro de custo",
+			"request": {
+				"url": "{{base_url}}/centro-de-custo/16",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar cargo",
+			"request": {
+				"url": "{{base_url}}/cargo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"Analista de Suporte\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar cargo copy",
+			"request": {
+				"url": "{{base_url}}/usuario/add-cargo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"usuarioId\": 5,\n\t\"cargoId\": 25\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar departamento",
+			"request": {
+				"url": "{{base_url}}/departamento",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"Infraestrutura\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar usuario a departamento",
+			"request": {
+				"url": "{{base_url}}/departamento/add-usuario",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"departamentoId\": 3, \n\t\"usuarioId\": 7\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar centro de custo",
+			"request": {
+				"url": "{{base_url}}/centro-de-custo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"TI\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
